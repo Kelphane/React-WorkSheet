@@ -1,41 +1,22 @@
 import React, {Component} from "react";
+import DisplayName from "./Components/DisplayName/DisplayName";
 
 class App extends Component{
-    constructor(props){
+   constructor(props){
         super(props);
-        state = {
+        this.state = {
             firstName: 'Reggie',
             lastName: 'White'
-        }
-    }
-    
-    //Exercise 2
-    state = {
-        names: ['Mike', 'Nevin', 'Aaron', 'Tory', 'Kellie']
-    }
-    //Exercise 4
-    state = {
-        superheroes = [
-            {
-                superheroId: 1,
-                name: 'Batman',
-                primaryAbility: 'Wealthy',
-                secondarAbility: 'Rich'
-            },
-            {
-                superheroId: 2,
-                name: 'Superman',
-                primaryAbility: 'Super strength',
-                secondarAbility: 'Fly'
-            },
-            {
-                superheroId: 3,
-                name: 'Spiderman',
-                primaryAbility: 'Spider senses',
-                secondarAbility: 'Shoots web'
-            }
-        ]
-    }
+        };
+   }
+
+   render(){
+       return (
+           <div>
+               <DisplayName firstName={this.state.firstName} lastName={this.state.lastName}/>
+           </div>
+       );
+   }
 }
 
 export default App;
