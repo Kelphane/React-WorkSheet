@@ -28,7 +28,7 @@ class Jokes extends Component{
     render(){
         return (
             <>
-            <h1>Testing!</h1>
+            <h1>Jokes!</h1>
             {this.state.jokes.map(joke => {
                 return <h4 key={joke.id}>{joke.setup} {joke.delivery}</h4>
             })}
