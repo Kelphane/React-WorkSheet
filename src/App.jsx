@@ -3,6 +3,7 @@ import DisplayName from "./Components/DisplayName/DisplayName";
 import DisplayList from "./Components/DisplayList/DisplayList";
 import SendAlert from "./Components/SendAlert/SendAlert";
 import SuperHeroList from "./Components/SuperHeroList/SuperHeroList";
+import CreateSuperHero from "./Components/CreateSuperHero/CreateSuperHero";
 
 class App extends Component{
    constructor(props){
@@ -38,6 +39,12 @@ class App extends Component{
        alert("devCodeCamp!");
    }
 
+   createHero(hero){
+       this.setState({
+           superheroes: [].push(hero)
+       });
+   }
+
    render(){
        return (
            <div>
@@ -45,6 +52,7 @@ class App extends Component{
                 <DisplayList names={this.state.names}/>
                 <SendAlert alert={this.AlertUser}/>
                 <SuperHeroList heroes={this.state.superheroes} />
+                <CreateSuperHero createHero={this.createHero}/>
            </div>
        );
    }
