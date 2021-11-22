@@ -4,6 +4,7 @@ import DisplayList from "./Components/DisplayList/DisplayList";
 import SendAlert from "./Components/SendAlert/SendAlert";
 import SuperHeroList from "./Components/SuperHeroList/SuperHeroList";
 import CreateSuperHero from "./Components/CreateSuperHero/CreateSuperHero";
+import Jokes from "./Components/Jokes/Jokes";
 
 class App extends Component{
    constructor(props){
@@ -35,24 +36,31 @@ class App extends Component{
         };
    }
 
-   AlertUser = () => {
+   alertUser = () => {
        alert("devCodeCamp!");
    }
 
-   createHero(hero){
+   //TO-DO!
+   /* createHero = (hero) => {
        this.setState({
-           superheroes: [].push(hero)
+           superheroes: this.state.superheroes.push({
+                superheroId: hero.id,
+                name: hero.name,
+                primaryAbility: hero.primary,
+                secondarAbility: hero.secondary
+           })
        });
-   }
+   } */
 
    render(){
        return (
            <div>
                 <DisplayName firstName={this.state.firstName} lastName={this.state.lastName}/>
                 <DisplayList names={this.state.names}/>
-                <SendAlert alert={this.AlertUser}/>
+                <SendAlert alert={this.alertUser}/>
                 <SuperHeroList heroes={this.state.superheroes} />
                 <CreateSuperHero createHero={this.createHero}/>
+                <Jokes />
            </div>
        );
    }
