@@ -1,10 +1,11 @@
 import React from "react";
+import "./SendAlert.css";
 
 const SendAlert = (props) => {
     return (
-        <>
-        <button onClick={props.alert}>Click Me</button>
-        </>
+        <div>
+        <button className="button-alert"onClick={props.alert}>Click Me</button>
+        </div>
     );
 }
 
