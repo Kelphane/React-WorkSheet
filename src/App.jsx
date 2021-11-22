@@ -40,17 +40,13 @@ class App extends Component{
        alert("devCodeCamp!");
    }
 
-   //TO-DO!
-   /* createHero = (hero) => {
+   createHero = (hero) => {
+    let newheroes = this.state.superheroes.concat(hero);
+
        this.setState({
-           superheroes: this.state.superheroes.push({
-                superheroId: hero.id,
-                name: hero.name,
-                primaryAbility: hero.primary,
-                secondarAbility: hero.secondary
-           })
+           superheroes: newheroes
        });
-   } */
+   }
 
    render(){
        return (

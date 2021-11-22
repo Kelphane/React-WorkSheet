@@ -5,10 +5,10 @@ class CreateSuperHero extends Component{
     constructor(props){
         super(props);
         this.state = {
-            id: " ",
+            superheroId: " ",
             name: " ",
-            primary: " ",
-            secondary: " "
+            primaryAbility: " ",
+            secondarAbility: " "
         }
     }
 
@@ -27,16 +27,16 @@ class CreateSuperHero extends Component{
         return(
             <form onSubmit={this.handleSubmit}>
                 <label>ID: </label>
-                <input type="text" name="id" onChange={this.handleChange} />
+                <input type="text" name="superheroId" onChange={this.handleChange} />
 
                 <label>Name: </label>
                 <input type="text" name="name" onChange={this.handleChange} />
 
                 <label>Primary Ability: </label>
-                <input type="text" name="primary" onChange={this.handleChange} />
+                <input type="text" name="primaryAbility" onChange={this.handleChange} />
 
                 <label>Secondary Ability: </label>
-                <input type="text" name="secondary" onChange={this.handleChange} />
+                <input type="text" name="secondarAbility" onChange={this.handleChange} />
 
                 <button type="submit">Submit!</button>
             </form>

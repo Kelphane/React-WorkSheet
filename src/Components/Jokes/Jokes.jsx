@@ -26,7 +26,6 @@ class Jokes extends Component{
     }
 
     render(){
-        console.log(this.state);
         return (
             <>
             <h1>Testing!</h1>

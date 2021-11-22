@@ -13,7 +13,7 @@ const SuperHeroList = (props) => {
             </thead>
 
             <tbody>
-                {props.heroes.map((hero) => {
+                {props.heroes.map(hero => {
                     return (
                         <tr key={hero.superheroId}>
                             <td>{hero.name}</td>
@@ -21,8 +21,7 @@ const SuperHeroList = (props) => {
                             <td>{hero.secondarAbility}</td>
                         </tr>
                        );
-                })} 
-
+                })}
             </tbody>
         </table>
     );
